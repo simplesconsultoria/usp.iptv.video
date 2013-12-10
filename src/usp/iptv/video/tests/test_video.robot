@@ -26,7 +26,7 @@ Test CRUD
 
 Click Add Video
     Open Add New Menu
-    Click Link  css=a#example
+    Click Link  css=a#video
     Page Should Contain  Add Video
 
 Create
