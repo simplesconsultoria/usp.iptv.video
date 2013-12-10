@@ -1,0 +1,21 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="usp.iptv.video">
+
+  <includeDependencies package="." />
+
+  <permission
+      id="usp.iptv.video.AddVideo"
+      title="usp.iptv.video: Add Video"
+      />
+
+  <!-- Suporte ao Generic Setup-->
+  <include file="profiles.zcml" />
+
+  <include package=".browser" />
+
+  <browser:resourceDirectory name="usp.iptv.video" directory="static" />
+
+</configure>

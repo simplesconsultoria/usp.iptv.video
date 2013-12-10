@@ -1,0 +1,32 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="usp.iptv.video">
+
+  <!-- Profiles -->
+  <genericsetup:registerProfile
+      name="default"
+      title="usp.iptv.video: Instalação do Pacote"
+      directory="profiles/default"
+      description="Instala o pacote usp.iptv.video dentro de um portal Plone"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      i18n:attributes="title; description"
+      />
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="usp.iptv.video: Remoção do Pacote"
+      directory="profiles/uninstall"
+      description="Remove o pacote usp.iptv.video de dentro de um portal Plone"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      i18n:attributes="title; description"
+      />
+
+  <!-- Upgrades -->
+  <include package=".upgrades" />
+
+  <utility factory=".config.HiddenProfiles" name="usp.iptv.video" />
+
+</configure>
